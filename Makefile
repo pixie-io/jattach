@@ -34,6 +34,10 @@ all: build build/$(JATTACH_EXE)
 
 dll: build build/$(JATTACH_DLL)
 
+install: build/jattach.a src/posix/jattach.h
+	cp build/jattach.a $(INSTALLDIR)/lib
+	cp src/posix/jattach.h $(INSTALLDIR)/include
+
 build:
 	mkdir -p build
 

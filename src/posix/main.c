@@ -17,9 +17,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern int jattach(int pid, int argc, char** argv);
+#include "jattach.h"
 
-int main(int argc, char** argv) {
+int main(int argc, const char** argv) {
     if (argc < 3) {
         printf("jattach " JATTACH_VERSION " built on " __DATE__ "\n"
                "Copyright 2021 Andrei Pangin\n"
